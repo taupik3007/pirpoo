@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'h1';
-    src: url('/public/assets/font/MontserratAlternates-Bold.ttf');
+    src: url('../font/MontserratAlternates-Bold.ttf');
 }
 
 @font-face {
     font-family: 'poppins';
-    src: url('/public/assets/font/Poppins-Regular.ttf');
+    src: url('../font/Poppins-Regular.ttf');
 }
 
 * {

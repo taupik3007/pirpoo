@@ -5,22 +5,22 @@
 
 @font-face {
     font-family: 'h3';
-    src: url('/public/assets/font/MontserratAlternates-Bold.ttf');
+    src: url('../font/MontserratAlternates-Bold.ttf');
 }
 
 @font-face {
     font-family: 'h1';
-    src: url('/public/assets/font/MontserratAlternates-ExtraBold.ttf');
+    src: url('../font/MontserratAlternates-ExtraBold.ttf');
 }
 
 @font-face {
     font-family: 'h5';
-    src: url('/public/assets/font/MontserratAlternates-Bold.ttf');
+    src: url('../font/MontserratAlternates-Bold.ttf');
 }
 
 @font-face {
     font-family: 'p';
-    src: url('/public/assets/font/Poppins-Regular.ttf');
+    src: url('../font/Poppins-Regular.ttf');
 }
 
 body {
