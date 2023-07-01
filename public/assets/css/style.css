@@ -65,7 +65,7 @@ body {
 .big-btn {
     display: inline-block;
     padding: 10px 20px;
-    border: none;
+    border: 2px solid #00FF94; /* Mengubah border menjadi berwarna hijau */
     color: #00FF94;
     border-radius: 14px;
     font-size: 24px;
@@ -74,7 +74,8 @@ body {
     text-decoration: none;
     cursor: pointer;
     outline: none;
-    border-bottom: none;
+    background-color: transparent; /* Mengubah background menjadi transparan */
+    border-bottom: 2px solid #00FF94; /* Menambahkan border bawah */
 }
 
 .big-btn:hover {
@@ -86,9 +87,7 @@ body {
     outline: 2px solid #00FF94;
 }
 
-.btn-link {
-    text-decoration: none !important;
-}
+
 
 .text-uppercase {
     font-family: 'h5';

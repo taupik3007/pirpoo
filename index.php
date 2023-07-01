@@ -16,7 +16,6 @@
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
         <div class="container">
             <a class="navbar-brand" href="#">PIRPOO</a>
