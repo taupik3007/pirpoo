@@ -32,36 +32,38 @@
                                         <h2 class="fw-bold mb-2">Sign Up</h2>
                                         <p class="text-black-50 mb-4">Create Account</p>
                                     </div>
-                                    <div class="form-outline mb-4">
-                                        <input type="E-mail" id="typeEmailX" class="form-control form-control-lg"
-                                            required />
-                                        <label class="form-label" for="typeEmailX" style="color: #3b11a4;">Full
-                                            Name</label>
-                                    </div>
-                                    <div class="form-outline mb-4">
-                                        <input type="E-mail" id="typeEmailX" class="form-control form-control-lg"
-                                            required />
-                                        <label class="form-label" for="typeEmailX"
-                                            style="color: #3b11a4;">Username</label>
-                                    </div>
-                                    <div class="form-outline mb-4">
-                                        <input type="E-mail" id="typeEmailX" class="form-control form-control-lg"
-                                            required />
-                                        <label class="form-label" for="typeEmailX" style="color: #3b11a4;"> Mobile
-                                            Phone</label>
-                                    </div>
-                                    <div class="form-outline mb-4">
-                                        <input type="password" id="typePasswordX" class="form-control form-control-lg"
-                                            required />
-                                        <label class="form-label" for="typePasswordX"
-                                            style="color: #3b11a4;">Password</label>
-                                    </div>
-                                    <p class="small mb-5 pb-lg-2"><a style="color: #a6a6a6;" href="#!">Forgot
-                                            password?</a>
-                                    </p>
-                                    <div class="text-center">
-                                        <button type="submit" onclick="login()">Login</button>
-                                    </div>
+                                    <form action="proses-register.php" method="POST">
+                                        <div class="form-outline mb-4">
+                                            <input type="text" name="fullname" id="typeEmailX" class="form-control form-control-lg"
+                                                required />
+                                            <label class="form-label" for="typeEmailX" style="color: #3b11a4;">Full
+                                                Name</label>
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <input type="text" name="username" id="typeEmailX" class="form-control form-control-lg"
+                                                required />
+                                            <label class="form-label" for="typeEmailX"
+                                                style="color: #3b11a4;">Username</label>
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <input type="number" name="phone" id="typeEmailX" class="form-control form-control-lg"
+                                                required />
+                                            <label class="form-label" for="typeEmailX" style="color: #3b11a4;"> Mobile
+                                                Phone</label>
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <input type="password" name ="password" id="typePasswordX" class="form-control form-control-lg"
+                                                required />
+                                            <label class="form-label" for="typePasswordX"
+                                                style="color: #3b11a4;">Password</label>
+                                        </div>
+                                        <p class="small mb-5 pb-lg-2"><a style="color: #a6a6a6;" href="#!">Forgot
+                                                password?</a>
+                                        </p>
+                                        <div class="text-center">
+                                            <input type="submit" value="register">
+                                        </div>
+                                    </form>
                                 </div>
                                 <div class="text-center">
                                     <p class="mb-0">Sudah punya akun? <a href="./login.php" class="fw-bold">Login</a>

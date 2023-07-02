@@ -44,7 +44,7 @@ p {
     color: #6433E0;
 }
 
-button[type="submit"] {
+input[type="submit"] {
     width: 100%;
     max-width: 400px;
     height: 70px;
