@@ -33,8 +33,7 @@
                                     <div class="form-outline mb-4">
                                         <input type="E-mail" id="typeEmailX" class="form-control form-control-lg"
                                             required />
-                                        <label class="form-label" for="typeEmailX" style="color: #3b11a4;">E-mail /
-                                            Mobile Phone</label>
+                                        <label class="form-label" for="typeEmailX" style="color: #3b11a4;">Username</label>
                                     </div>
                                     <div class="form-outline mb-4">
                                         <input type="password" id="typePasswordX" class="form-control form-control-lg"
