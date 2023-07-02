@@ -12,7 +12,7 @@ $chek_already = mysqli_num_rows($chek_username);
 $chek_upper = mysqli_fetch_array($chek_username);
 
 
-if($chek_already == 1){
+if($chek_already > 1){
     if($chek_upper['username'] == $username){
         ?>
         <script type="text/javascript">
