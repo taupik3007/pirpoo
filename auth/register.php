@@ -34,13 +34,13 @@
                                     </div>
                                     <form action="proses-register.php" method="POST">
                                         <div class="form-outline mb-4">
-                                            <input type="text" min="8" name="fullname" id="typeEmailX" class="form-control form-control-lg"
+                                            <input type="text"  name="fullname" id="typeEmailX" class="form-control form-control-lg"
                                                 required />
                                             <label class="form-label" for="typeEmailX" style="color: #3b11a4;">Full
                                                 Name</label>
                                         </div>
                                         <div class="form-outline mb-4">
-                                            <input type="text" name="username" id="typeEmailX" class="form-control form-control-lg"
+                                            <input type="text" minlength="8" name="username" id="typeEmailX" class="form-control form-control-lg"
                                                 required />
                                             <label class="form-label" for="typeEmailX"
                                                 style="color: #3b11a4;">Username</label>
@@ -52,7 +52,7 @@
                                                 Phone</label>
                                         </div>
                                         <div class="form-outline mb-4">
-                                            <input type="password" name ="password" id="typePasswordX" class="form-control form-control-lg"
+                                            <input type="password" minlength="8" name ="password" id="typePasswordX" class="form-control form-control-lg"
                                                 required />
                                             <label class="form-label" for="typePasswordX"
                                                 style="color: #3b11a4;">Password</label>
