@@ -34,7 +34,7 @@
                                     </div>
                                     <form action="proses-register.php" method="POST">
                                         <div class="form-outline mb-4">
-                                            <input type="text" name="fullname" id="typeEmailX" class="form-control form-control-lg"
+                                            <input type="text" min="8" name="fullname" id="typeEmailX" class="form-control form-control-lg"
                                                 required />
                                             <label class="form-label" for="typeEmailX" style="color: #3b11a4;">Full
                                                 Name</label>
