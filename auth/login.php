@@ -30,13 +30,14 @@
                                 <div class="mb-md-5 mt-md-4">
                                     <img src="../public/assets/img/avatar.png" class="rounded mx-auto mb-5 d-block"
                                         alt="avatar" style="margin-bottom: 20px;">
+                                    <form action="proses_login.php" method="POST">
                                     <div class="form-outline mb-4">
-                                        <input type="E-mail" id="typeEmailX" class="form-control form-control-lg"
+                                        <input type="E-mail" name="username" id="typeEmailX" class="form-control form-control-lg"
                                             required />
                                         <label class="form-label" for="typeEmailX" style="color: #3b11a4;">Username</label>
                                     </div>
                                     <div class="form-outline mb-4">
-                                        <input type="password" id="typePasswordX" class="form-control form-control-lg"
+                                        <input type="password" name="password" id="typePasswordX" class="form-control form-control-lg"
                                             required />
                                         <label class="form-label" for="typePasswordX"
                                             style="color: #3b11a4;">Password</label>
@@ -45,8 +46,10 @@
                                             password?</a>
                                     </p>
                                     <div class="text-center">
-                                        <button type="submit" onclick="login()">Login</button>
+                                        <!-- <button type="submit" onclick="login()">Login</button> -->
+                                        <input type="submit" value="Login">
                                     </div>
+                                    </form>
                                 </div>
                                 <div class="text-center">
                                     <p class="mb-0">Kamu belum punya akun? <a href="./register.php"
