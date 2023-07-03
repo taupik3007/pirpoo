@@ -12,6 +12,10 @@
     font-family: 'poppins';
 }
 
+.container {
+    width: min(100%, 950px);
+}
+
 .fullscreen-bg {
     position: fixed;
     top: 0;
