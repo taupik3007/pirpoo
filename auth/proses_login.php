@@ -23,6 +23,7 @@
 	 		// code...
 
 	 		session_start();
+			$_SESSION['user_id']= $data['user_id'];
 			$_SESSION['username'] = $username;
 			$_SESSION['nama'] = $data['nama'];
 	 		// $_SESSION['username'] = $username;
