@@ -31,6 +31,7 @@
 	 		header("location:../Homepage.php");
 
 	 	}else{
+
 	?>
         <script type="text/javascript">
         alert("password salah");
@@ -38,12 +39,7 @@
     </script>
         <?php
 
-	 	}
-
-
-
-
-		
+			
 	 } else{
 		 ?>
 		 <script type="text/javascript">
