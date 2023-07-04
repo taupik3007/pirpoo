@@ -40,7 +40,8 @@
         <?php
 
 			
-	 } else{
+	 } 
+	}else{
 		 ?>
 		 <script type="text/javascript">
 		 alert("Username Tidak Ditemukan");
