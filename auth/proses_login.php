@@ -31,12 +31,7 @@
 	 		header("location:../Homepage.php");
 
 	 	}else{
-	?>
-        <script type="text/javascript">
-        alert("password salah");
-        window.location.href = "login.php";
-    </script>
-        <?php
+	
 	 	}
 
 
