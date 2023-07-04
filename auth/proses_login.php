@@ -31,16 +31,25 @@
 	 		header("location:../Homepage.php");
 
 	 	}else{
-	 		echo "password salah";
+				?>
+				<script type="text/javascript">
+				alert("Password Salah");
+				window.location.href = "login.php";
+			</script>
+				<?php
 	 	}
 
 
 
 
-
+		
 	 } else{
-	 	echo "username tidak ditemukan";
-	 	// header("location:login.php");
+		 ?>
+		 <script type="text/javascript">
+		 alert("Username Tidak Ditemukan");
+		 window.location.href = "login.php";
+	 </script>
+		 <?php
 	 }
 
 
