@@ -48,7 +48,8 @@
                                     </form>
                                 </div>
                                 <div class="text-center">
-                                    <p class="mb-0">Sudah punya akun? <a href="./login.php" class="fw-bold">Login</a>
+                                    <p class="mb-0">Sudah punya akun? <a href="../auth/login.php"
+                                            class="fw-bold">Login</a>
                                     </p>
                                 </div>
                             </div>

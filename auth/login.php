@@ -44,12 +44,8 @@
                                             <label class="form-label" for="password"
                                                 style="color: #3b11a4;">Password</label>
                                         </div>
-<<<<<<< HEAD
                                         <p class="small mb-5 pb-lg-2"><a style="color: #a6a6a6;"
-                                                href="../profile/forgot-php.php">Forgot
-=======
-                                        <p class="small mb-5 pb-lg-2"><a style="color: #a6a6a6;" href="#!">Forgot
->>>>>>> fb2ca76caff592cc1a94fc8651929f7d5f5f3f11
+                                                href="../profile/forgot-pw.php">Forgot
                                                 password?</a>
                                         </p>
                                         <div class="text-center">
