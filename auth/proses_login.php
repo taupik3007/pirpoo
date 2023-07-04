@@ -21,7 +21,12 @@
 	 		$data = mysqli_fetch_array($check_password);
 	 		// echo "berhasil login";
 	 		// code...
-
+?>
+        <script type="text/javascript">
+        alert("berhasil terdaftar");
+        window.location.href = "register.php";
+    </script>
+        <?php
 	 		session_start();
 			$_SESSION['user_id']= $data['user_id'];
 			$_SESSION['username'] = $username;
