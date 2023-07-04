@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="icon" type="image/png" href="../public/assets/img/Logo pirpo.PNG">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="../public/assets/css/login.css">
@@ -31,24 +32,24 @@
                                     <img src="../public/assets/img/avatar.png" class="rounded mx-auto mb-5 d-block"
                                         alt="avatar" style="margin-bottom: 20px;">
                                     <form action="proses_login.php" method="POST">
-                                    <div class="form-outline mb-4">
-                                        <input type="E-mail" name="username" id="typeEmailX" class="form-control form-control-lg"
-                                            required />
-                                        <label class="form-label" for="typeEmailX" style="color: #3b11a4;">Username</label>
-                                    </div>
-                                    <div class="form-outline mb-4">
-                                        <input type="password" name="password" id="typePasswordX" class="form-control form-control-lg"
-                                            required />
-                                        <label class="form-label" for="typePasswordX"
-                                            style="color: #3b11a4;">Password</label>
-                                    </div>
-                                    <p class="small mb-5 pb-lg-2"><a style="color: #a6a6a6;" href="#!">Forgot
-                                            password?</a>
-                                    </p>
-                                    <div class="text-center">
-                                        <!-- <button type="submit" onclick="login()">Login</button> -->
-                                        <input type="submit" value="Login">
-                                    </div>
+                                        <div class="form-outline mb-4">
+                                            <input type="username" name="username" id="username"
+                                                class="form-control form-control-lg" required />
+                                            <label class="form-label" for="username"
+                                                style="color: #3b11a4;">Username</label>
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <input type="password" name="password" id="password"
+                                                class="form-control form-control-lg" required />
+                                            <label class="form-label" for="password"
+                                                style="color: #3b11a4;">Password</label>
+                                        </div>
+                                        <p class="small mb-5 pb-lg-2"><a style="color: #a6a6a6;" href="#!">Forgot
+                                                password?</a>
+                                        </p>
+                                        <div class="text-center">
+                                            <button type="submit" onclick="login()">Login</button>
+                                        </div>
                                     </form>
                                 </div>
                                 <div class="text-center">
@@ -65,9 +66,9 @@
 
     <script>
     function login() {
-        var email = document.getElementById("typeEmailX").value;
-        var password = document.getElementById("typePasswordX").value;
-        if (email === "" || password === "") {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        if (username === "" || password === "") {
             showNotification("Maneh teu acan ngisi form.", "error");
         }
     }

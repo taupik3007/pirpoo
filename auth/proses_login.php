@@ -28,7 +28,7 @@
 			$_SESSION['nama'] = $data['nama'];
 	 		// $_SESSION['username'] = $username;
 	 		// $_SESSION['nama'] = $data['nama'];
-	 		header("location:beranda.php");
+	 		header("location:../Homepage.php");
 
 	 	}else{
 	 		echo "password salah";

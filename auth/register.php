@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <link rel="icon" type="image/png" href="../public/assets/img/Logo pirpo.PNG">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="../public/assets/css/login.css">
@@ -34,34 +35,34 @@
                                     </div>
                                     <form action="proses-register.php" method="POST">
                                         <div class="form-outline mb-4">
-                                            <input type="text"  name="fullname" id="typeEmailX" class="form-control form-control-lg"
-                                                required />
-                                            <label class="form-label" for="typeEmailX" style="color: #3b11a4;">Full
+                                            <input type="text" name="fullname" id="fullname"
+                                                class="form-control form-control-lg" required />
+                                            <label class="form-label" for="fullname" style="color: #3b11a4;">Full
                                                 Name</label>
                                         </div>
                                         <div class="form-outline mb-4">
-                                            <input type="text" minlength="8" name="username" id="typeEmailX" class="form-control form-control-lg"
-                                                required />
-                                            <label class="form-label" for="typeEmailX"
+                                            <input type="text" minlength="8" name="username" id="username"
+                                                class="form-control form-control-lg" required />
+                                            <label class="form-label" for="username"
                                                 style="color: #3b11a4;">Username</label>
                                         </div>
                                         <div class="form-outline mb-4">
-                                            <input type="number" name="phone" id="typeEmailX" class="form-control form-control-lg"
-                                                required />
-                                            <label class="form-label" for="typeEmailX" style="color: #3b11a4;"> Mobile
+                                            <input type="tel" name="phone" id="phone"
+                                                class="form-control form-control-lg" required pattern="[0-9]+" />
+                                            <label class="form-label" for="phone" style="color: #3b11a4;"> Mobile
                                                 Phone</label>
                                         </div>
                                         <div class="form-outline mb-4">
-                                            <input type="password" minlength="8" name ="password" id="typePasswordX" class="form-control form-control-lg"
-                                                required />
-                                            <label class="form-label" for="typePasswordX"
+                                            <input type="password" minlength="8" name="password" id="password"
+                                                class="form-control form-control-lg" required />
+                                            <label class="form-label" for="password"
                                                 style="color: #3b11a4;">Password</label>
                                         </div>
                                         <p class="small mb-5 pb-lg-2"><a style="color: #a6a6a6;" href="#!">Forgot
                                                 password?</a>
                                         </p>
                                         <div class="text-center">
-                                            <input type="submit" value="register">
+                                            <button type="submit" onclick="register()">Register</button>
                                         </div>
                                     </form>
                                 </div>
@@ -78,10 +79,12 @@
     </div>
 
     <script>
-    function login() {
-        var email = document.getElementById("typeEmailX").value;
-        var password = document.getElementById("typePasswordX").value;
-        if (email === "" || password === "") {
+    function register() {
+        var fullname = document.getElementById("fullname").value;
+        var username = document.getElementById("username").value;
+        var phone = document.getElementById("phone").value;
+        var password = document.getElementById("password").value;
+        if (fullname === "" || username === "" || phone === "" || password === "") {
             showNotification("Maneh teu acan ngisi form.", "error");
         }
     }
