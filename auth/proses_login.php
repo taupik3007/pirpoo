@@ -31,12 +31,13 @@
 	 		header("location:../Homepage.php");
 
 	 	}else{
-				?>
-				<script type="text/javascript">
-				alert("Password Salah");
-				window.location.href = "login.php";
-			</script>
-				<?php
+	?>
+        <script type="text/javascript">
+        alert("password salah");
+        window.location.href = "login.php";
+    </script>
+        <?php
+
 	 	}
 
 
