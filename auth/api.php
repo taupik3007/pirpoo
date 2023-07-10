@@ -1,6 +1,7 @@
 <?php
 $token = "#76+prfe!QQ6vg4V99Xy";
-$target = "6285870472353";
+$target = "6289516085820";
+$awikwok = "awikwok";
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
@@ -14,7 +15,7 @@ curl_setopt_array($curl, array(
   CURLOPT_CUSTOMREQUEST => 'POST',
   CURLOPT_POSTFIELDS => array(
 'target' => $target,
-'message' => 'mang bud gararetek',
+'message' => $awikwok.' fsdaf',
 
 ),
   CURLOPT_HTTPHEADER => array(

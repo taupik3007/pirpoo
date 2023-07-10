@@ -59,7 +59,7 @@
                                                 style="color: #3b11a4;">Password</label>
                                         </div>
                                         <p class="small mb-5 pb-lg-2"><a style="color: #a6a6a6;"
-                                                href="../profile/forgot-pw.php">Forgot
+                                                href="forgot-pw.php">Forgot
                                                 password?</a>
                                         </p>
                                         <div class="text-center">

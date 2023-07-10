@@ -35,7 +35,7 @@
                                         <p class="text-black-50 mb-4">Tulis No Telepon Kamu Untuk Mendaptkan Password
                                         </p>
                                     </div>
-                                    <form action="proses_login.php" method="POST">
+                                    <form action="proses-forgot.php" method="POST">
                                         <div class="form-outline mb-5">
                                             <input type="tel" name="phone" id="phone"
                                                 class="form-control form-control-lg" required pattern="[0-9]+" />
@@ -43,7 +43,7 @@
                                                 Phone</label>
                                         </div>
                                         <div class="text-center">
-                                            <button type="submit" onclick="forgotPw()">Kirim Pesan</button>
+                                            <button type="submit">Kirim Pesan</button>
                                         </div>
                                     </form>
                                 </div>
