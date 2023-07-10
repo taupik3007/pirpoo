@@ -12,11 +12,27 @@ $chek_already = mysqli_num_rows($chek_username);
 $chek_upper = mysqli_fetch_array($chek_username);
 
 
+
 if($chek_already > 0){
     if($chek_upper['username'] == $username){
         ?>
         <script type="text/javascript">
         alert("Username Telah terdaftar");
+        window.location.href = "register.php";
+    </script>
+        <?php
+    }
+
+}
+
+$chek_phone = mysqli_query($koneksi,"SELECT `phone` FROM `user` where  `phone` = '$phone'");
+$chek_already = mysqli_num_rows($chek_phone);
+$chek_upper = mysqli_fetch_array($chek_phone);
+if($chek_already > 0){
+    if($chek_upper['phone'] == $phone){
+        ?>
+        <script type="text/javascript">
+        alert("Nomor Telepon Telah terdaftar");
         window.location.href = "register.php";
     </script>
         <?php
