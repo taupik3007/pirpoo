@@ -1,3 +1,13 @@
+<?php 
+$id = $_GET['id'];
+if(!isset($id)){
+    header('location: forgot-pw.php');
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,10 +43,12 @@
                                         </p>
                                     </div>
                                     <form action="proses_otp.php" method="POST">
+                                        
                                         <div class="form-outline mb-5">
+                                            <input type="hidden" name="id" value = "<?php echo $id;?>">
                                             <input type="text" name="otp" id="otp" class="form-control form-control-lg"
                                                 required pattern="[0-9]+" />
-                                            <label class="form-label" for="otp" style="color: #3b11a4;">Kode OTP</label>
+                                            <label class="form-label" name="otp" for="otp" style="color: #3b11a4;">Kode OTP</label>
                                         </div>
                                         <div class="text-center">
                                             <button type="submit" onclick="lanjut()">Lanjutkan</button>
