@@ -24,7 +24,6 @@
                             Reset Password
                         </div>
                     </div>
-
                     <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                         <div class="card bg-light" style="border-radius: 80px 15px;">
                             <div class="card-body p-5">
@@ -40,7 +39,7 @@
                                             <label class="form-label" for="otp" style="color: #3b11a4;">Kode OTP</label>
                                         </div>
                                         <div class="text-center">
-                                            <button type="submit">Lanjutkan</button>
+                                            <button type="submit" onclick="lanjut()">Lanjutkan</button>
                                         </div>
                                     </form>
                                 </div>
@@ -51,6 +50,38 @@
             </div>
         </section>
     </div>
+
+    <script>
+    function lanjut() {
+        var otp = document.getElementById("otp").value;
+        if (otp === "") {
+            showNotification("Kamu belum mengisi hati ini", "error");
+        }
+    }
+
+    function showNotification(message, type) {
+        if (!("Notification" in window)) {
+            alert(message);
+            return;
+        }
+
+        if (Notification.permission === "granted") {
+            var notification = new Notification(message);
+        } else if (Notification.permission !== "denied") {
+            Notification.requestPermission().then(function(permission) {
+                if (permission === "granted") {
+                    var notification = new Notification(message);
+                } else {
+                    alert(message);
+                }
+            });
+
+        } else {
+            alert(message);
+        }
+    }
+    </script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
