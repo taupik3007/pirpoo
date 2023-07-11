@@ -33,15 +33,17 @@
                                         <p class="text-black-50 mb-4">Masukan Password Baru
                                         </p>
                                     </div>
-                                    <form action="proses_otp.php" method="POST">
+                                    <form action="update-pw.php" method="POST">
                                         <div class="form-outline mb-5">
-                                            <input type="password" name="password" id="password" class="form-control form-control-lg"
+                                            <input type="hidden" name="id" value = "<?php echo $id;?>">
+                                            <input type="password" name="password_new" id="password" class="form-control form-control-lg"
                                                 required="" />
-                                            <label class="form-label" for="otp" style="color: #3b11a4;">Password Baru</label>
+                                            <label class="form-label" for="password" style="color: #3b11a4;">Password Baru</label>
                                         </div>
                                         <div class="text-center">
                                             <button type="submit">Lanjutkan</button>
                                         </div>
+    
                                     </form>
                                 </div>
                             </div>
@@ -51,12 +53,21 @@
             </div>
         </section>
     </div>
+     
+		<!-- include '../koneksi.php';
+		$up_pw = mysqli_query($koneksi,"SELECT * FROM `user`");
 
+		foreach ($up_pw as $data){
+            echo $data['password'];
+        } -->
+			
+	
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
     </script>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js">
+
     </script>
 </body>
 
