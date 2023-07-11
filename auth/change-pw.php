@@ -63,13 +63,6 @@ $id = $_GET['id'];
             </div>
         </section>
     </div>
-     
-		<!-- include '../koneksi.php';
-		$up_pw = mysqli_query($koneksi,"SELECT * FROM `user`");
-
-		foreach ($up_pw as $data){
-            echo $data['password'];
-        } -->
 			
 	
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
