@@ -1,6 +1,43 @@
+* {
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.ihelp::before {
+  content: url('../img/help-circle.svg');
+  width: auto;
+  height: auto;
+  /* tambahkan properti CSS lainnya sesuai kebutuhan */
+}
+
+.iset::before {
+    content: url('../img/settings.svg');
+    width: auto;
+    height: auto;
+}
 
 
 
-.navbar-nav {
-    width: 320px;
+.big-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #00FF94; /* Mengubah border menjadi berwarna hijau */
+    color: #00FF94;
+    border-radius: 14px;
+    font-size: 24px;
+    margin-right: 8px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent; /* Mengubah background menjadi transparan */
+    border-bottom: 2px solid #00FF94; /* Menambahkan border bawah */
+}
+
+.big-btn:hover {
+    background-color: #6433E0;
+    text-decoration: none;
+}
+
+.big-btn:focus {
+    outline: 2px solid #00FF94;
 }
