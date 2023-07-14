@@ -79,7 +79,7 @@
                         <i class="ihelp pl-3 pr-2 float-left"></i>
                         Help
                     </a>
-                    <a href="../index.php" class="btn-link p-4 text-center text-xl">
+                    <a href="../index.php" class="btn-link p-4 text-center text-base">
                         <button class="big-btn">Log out</button>
                     </a>
                 </div>
@@ -112,11 +112,11 @@
                 <div class="mt-3 flex flex-col">
                     <!-- Post 1 -->
                     <div class="bg-white mt-3">
-                        <img class="border rounded-t-lg shadow-lg"
-                            src="https://images.unsplash.com/photo-1572817519612-d8fadd929b00?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
                         <div class="bg-white border shadow p-5 text-xl text-gray-700 font-semibold">
                             A Pretty Cool photo from the mountains.
                         </div>
+                        <img class="border rounded-t-lg shadow-lg"
+                            src="https://images.unsplash.com/photo-1572817519612-d8fadd929b00?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
                         <div class="bg-white p-1 border shadow flex flex-row flex-wrap">
                             <div class="w-1/3 hover:bg-gray-200 text-center text-xl text-gray-700 font-semibold">Like
                             </div>
@@ -128,25 +128,16 @@
                                 Comment
                             </div>
                         </div>
-                        <div
-                            class="bg-white border-4 bg-gray-300 border-white rounded-b-lg shadow p-5 text-xl text-gray-700 content-center font-semibold flex flex-row flex-wrap">
-                            <div class="w-full">
-                                <div class="w-full text-left text-xl text-gray-600">
-                                    @Some Person
-                                </div>
-                                A Pretty Cool photo from the mountains.
-                                A Pretty Cool photo from the mountains.
-                            </div>
-                        </div>
+
                     </div>
 
                     <!-- Post 2 -->
                     <div class="bg-white mt-3">
-                        <img class="border rounded-t-lg shadow-lg"
-                            src="https://images.unsplash.com/photo-1572817519612-d8fadd929b00?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
                         <div class="bg-white border shadow p-5 text-xl text-gray-700 font-semibold">
                             A Pretty Cool photo from the mountains.
                         </div>
+                        <img class="border rounded-t-lg shadow-lg"
+                            src="https://images.unsplash.com/photo-1572817519612-d8fadd929b00?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
                         <div class="bg-white p-1 rounded-b-lg border shadow flex flex-row flex-wrap">
                             <div class="w-1/3 hover:bg-gray-200 text-center text-xl text-gray-700 font-semibold">Like
                             </div>
@@ -162,11 +153,11 @@
 
                     <!-- Post 3 -->
                     <div class="bg-white mt-3">
-                        <img class="border rounded-t-lg shadow-lg"
-                            src="https://images.unsplash.com/photo-1572817519612-d8fadd929b00?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
                         <div class="bg-white border shadow p-5 text-xl text-gray-700 font-semibold">
                             A Pretty Cool photo from the mountains.
                         </div>
+                        <img class="border rounded-t-lg shadow-lg"
+                            src="https://images.unsplash.com/photo-1572817519612-d8fadd929b00?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
                         <div class="bg-white p-1 rounded-b-lg border shadow flex flex-row flex-wrap">
                             <div class="w-1/3 hover:bg-gray-200 text-center text-xl text-gray-700 font-semibold">Like
                             </div>
