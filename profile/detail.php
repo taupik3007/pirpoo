@@ -115,7 +115,7 @@
                         <div class="bg-white border shadow p-5 text-xl text-gray-700 font-semibold">
                             A Pretty Cool photo from the mountains.
                         </div>
-                        <img class="border rounded-t-lg shadow-lg"
+                        <img class="border shadow-lg"
                             src="https://images.unsplash.com/photo-1572817519612-d8fadd929b00?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
                         <div class="bg-white p-1 border shadow flex flex-row flex-wrap">
                             <div class="w-1/3 hover:bg-gray-200 text-center text-xl text-gray-700 font-semibold">Like
@@ -136,7 +136,7 @@
                         <div class="bg-white border shadow p-5 text-xl text-gray-700 font-semibold">
                             A Pretty Cool photo from the mountains.
                         </div>
-                        <img class="border rounded-t-lg shadow-lg"
+                        <img class="border shadow-lg"
                             src="https://images.unsplash.com/photo-1572817519612-d8fadd929b00?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
                         <div class="bg-white p-1 rounded-b-lg border shadow flex flex-row flex-wrap">
                             <div class="w-1/3 hover:bg-gray-200 text-center text-xl text-gray-700 font-semibold">Like
@@ -156,7 +156,7 @@
                         <div class="bg-white border shadow p-5 text-xl text-gray-700 font-semibold">
                             A Pretty Cool photo from the mountains.
                         </div>
-                        <img class="border rounded-t-lg shadow-lg"
+                        <img class="border shadow-lg"
                             src="https://images.unsplash.com/photo-1572817519612-d8fadd929b00?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
                         <div class="bg-white p-1 rounded-b-lg border shadow flex flex-row flex-wrap">
                             <div class="w-1/3 hover:bg-gray-200 text-center text-xl text-gray-700 font-semibold">Like
