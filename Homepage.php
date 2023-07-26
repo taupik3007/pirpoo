@@ -44,7 +44,7 @@
                 <a href="./profile/detail.php">
                     <img class="user__avatar" src="./public/assets/img/pp.png" alt="" />
                 </a>
-                <h4>Park Jimin</h4>
+                <h4><?php echo $_SESSION['nama']; ?></h4>
             </div>
         </div>
     </div>
