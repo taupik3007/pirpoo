@@ -78,7 +78,7 @@
 
             <div class="text-center-sidebar">
                 <!--ini mah yang di samping-->
-                <button class="big-btn" onclick="myFunction()">POST</button>
+                <a class="big-btn" href="logout.php" >Log out</a>
             </div>
 
 
