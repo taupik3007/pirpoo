@@ -2,25 +2,91 @@
     font-family: 'Montserrat Alternates', sans-serif;
 }
 
-.ihelp::before {
-  content: url('../img/help-circle.svg');
-  width: auto;
-  height: auto;
-  /* tambahkan properti CSS lainnya sesuai kebutuhan */
+.post {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.75);
 }
 
-.iset::before {
-    content: url('../img/settings.svg');
-    width: auto;
+.post__image {
+    text-align: center;
+}
+
+.post__image img {
+    width: 97%;
     height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
+
+.post__top {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 15px;
+}
+
+.post__avatar {
+    border-radius: 30%;
+    width: 25px;
+    margin-right: 10px;
+}
+
+.post__topInfo h3 {
+    font-size: medium;
+    font-weight: 600;
+}
+
+.post__topInfo p {
+    font-size: small;
+    color: gray;
+}
+
+.post__bottom {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 5px 20px;
+    text-align: justify;
+}
+
+.post__options {
+    padding-top: 10px;
+    border-top: 1px solid lightgray;
+    display:inline-flex;
+    justify-content: space-evenly;
+    font-size: medium;
+    color: gray;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.post__option {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    flex: 1;
+}
+
+.post__option p {
+    margin-left: 10px;
+}
+
+.post__option:hover {
+    background-color: #eff2f5;
+    border-radius: 10px;
+}
 
 
 .big-btn {
     display: inline-block;
     padding: 10px 20px;
-    border: 2px solid #00FF94; /* Mengubah border menjadi berwarna hijau */
+    border: 2px solid #00FF94;
+    /* Mengubah border menjadi berwarna hijau */
     color: #00FF94;
     border-radius: 14px;
     font-size: 24px;
@@ -29,8 +95,10 @@
     text-decoration: none;
     cursor: pointer;
     outline: none;
-    background-color: transparent; /* Mengubah background menjadi transparan */
-    border-bottom: 2px solid #00FF94; /* Menambahkan border bawah */
+    background-color: transparent;
+    /* Mengubah background menjadi transparan */
+    border-bottom: 2px solid #00FF94;
+    /* Menambahkan border bawah */
 }
 
 .big-btn:hover {

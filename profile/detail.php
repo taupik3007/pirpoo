@@ -9,6 +9,8 @@
     <link rel="icon" type="image/png" href="../public/assets/img/Logo pirpo.PNG">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../public/assets/css/profile.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600;700;800&display=swap"
         rel="stylesheet">
 </head>
@@ -71,12 +73,12 @@
                 <div class="w-full h-screen antialiased flex flex-col hover:cursor-pointer mt-8">
                     <a class="hover:bg-light-300 bg-light-200 p-2 w-full text-base text-left text-black-600 font-semibold"
                         href="">
-                        <i class="iset pl-3 pr-2 float-left"></i>
-                        Settings
+                        <i class="bi bi-person-fill pl-3 pr-2 float-left"></i>
+                        Edit Profile
                     </a>
                     <a class="hover:bg-light-300 bg-light-200 p-2 w-full text-base text-left text-black-600 font-semibold"
                         href="">
-                        <i class="ihelp pl-3 pr-2 float-left"></i>
+                        <i class="bi bi-question-circle pl-3 pr-2 float-left"></i>
                         Help
                     </a>
                     <a href="../index.php" class="btn-link p-4 text-center text-base">
@@ -90,7 +92,7 @@
             <!-- Main Content -->
             <div class="w-full md:w-3/4 lg:w-4/5 p-5 md:px-12 lg:24 h-full overflow-x-scroll antialiased">
                 <!-- Create new post -->
-                <div class="bg-white w-full shadow rounded-lg p-5">
+                <!-- <div class="bg-white w-full shadow rounded-lg p-5">
                     <textarea class="bg-gray-200 w-full rounded-lg shadow border p-2" rows="5"
                         placeholder="Speak your mind"></textarea>
 
@@ -106,70 +108,120 @@
                                 class="float-right bg-indigo-400 hover:bg-indigo-300 text-white p-2 rounded-lg">Submit</button>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Posts -->
                 <div class="mt-3 flex flex-col">
                     <!-- Post 1 -->
-                    <div class="bg-white mt-3">
-                        <div class="bg-white border shadow p-5 text-xl text-gray-700 font-semibold">
-                            A Pretty Cool photo from the mountains.
-                        </div>
-                        <img class="border shadow-lg"
-                            src="https://images.unsplash.com/photo-1572817519612-d8fadd929b00?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
-                        <div class="bg-white p-1 border shadow flex flex-row flex-wrap">
-                            <div class="w-1/3 hover:bg-gray-200 text-center text-xl text-gray-700 font-semibold">Like
-                            </div>
-                            <div
-                                class="w-1/3 hover:bg-gray-200 border-l-4 border-r- text-center text-xl text-gray-700 font-semibold">
-                                Share</div>
-                            <div
-                                class="w-1/3 hover:bg-gray-200 border-l-4 text-center text-xl text-gray-700 font-semibold">
-                                Comment
+                    <div class="post">
+                        <div class="post__top">
+                            <img class="user__avatar post__avatar" src="../public/assets/img/pp.png" alt="" />
+                            <div class="post__topInfo">
+                                <h3 class="text-medium">User <a href="index.php?page=home"
+                                        class="text-blue-500">.Follow</a></h3>
+                                <p class="text-small text-gray-500">25 April at 20:30</p>
                             </div>
                         </div>
-
+                        <div class="post__bottom">
+                            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the
+                                industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                galley of type and
+                                scrambled it to make a type specimen book. It has survived not only five centuries, but
+                                also the leap into
+                                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                                with the release of
+                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                publishing software like
+                                Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                        <div class="post__image">
+                            <img src="../public/assets/img/post.png" alt="" />
+                        </div>
+                        <div class="post__options">
+                            <div class="post__option flex items-center">
+                                <span class="material-icons text-xl">thumb_up</span>
+                                <p class="text-medium">Like</p>
+                            </div>
+                            <div class="post__option flex items-center">
+                                <span class="material-icons text-xl">chat_bubble_outline</span>
+                                <p class="text-medium">Comment</p>
+                            </div>
+                            <div class="post__option flex items-center">
+                                <span class="material-icons text-xl">near_me</span>
+                                <p class="text-medium">Share</p>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Post 2 -->
-                    <div class="bg-white mt-3">
-                        <div class="bg-white border shadow p-5 text-xl text-gray-700 font-semibold">
-                            A Pretty Cool photo from the mountains.
-                        </div>
-                        <img class="border shadow-lg"
-                            src="https://images.unsplash.com/photo-1572817519612-d8fadd929b00?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
-                        <div class="bg-white p-1 rounded-b-lg border shadow flex flex-row flex-wrap">
-                            <div class="w-1/3 hover:bg-gray-200 text-center text-xl text-gray-700 font-semibold">Like
+                    <div class="post">
+                        <div class="post__top">
+                            <img class="user__avatar post__avatar" src="../public/assets/img/pp.png" alt="" />
+                            <div class="post__topInfo">
+                                <h3 class="text-medium">User <a href="index.php?page=home"
+                                        class="text-blue-500">.Follow</a></h3>
+                                <p class="text-small text-gray-500">25 April at 20:30</p>
                             </div>
-                            <div
-                                class="w-1/3 hover:bg-gray-200 border-l-4 border-r- text-center text-xl text-gray-700 font-semibold">
-                                Share</div>
-                            <div
-                                class="w-1/3 hover:bg-gray-200 border-l-4 text-center text-xl text-gray-700 font-semibold">
-                                Comment
+                        </div>
+                        <div class="post__bottom">
+                            <p class="text-justify">
+                                Post Without Image
+                            </p>
+                        </div>
+                        <div class="post__image">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="post__options">
+                            <div class="post__option flex items-center">
+                                <span class="material-icons text-xl">thumb_up</span>
+                                <p class="text-medium">Like</p>
+                            </div>
+                            <div class="post__option flex items-center">
+                                <span class="material-icons text-xl">chat_bubble_outline</span>
+                                <p class="text-medium">Comment</p>
+                            </div>
+                            <div class="post__option flex items-center">
+                                <span class="material-icons text-xl">near_me</span>
+                                <p class="text-medium">Share</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Post 3 -->
-                    <div class="bg-white mt-3">
-                        <div class="bg-white border shadow p-5 text-xl text-gray-700 font-semibold">
-                            A Pretty Cool photo from the mountains.
-                        </div>
-                        <img class="border shadow-lg"
-                            src="https://images.unsplash.com/photo-1572817519612-d8fadd929b00?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
-                        <div class="bg-white p-1 rounded-b-lg border shadow flex flex-row flex-wrap">
-                            <div class="w-1/3 hover:bg-gray-200 text-center text-xl text-gray-700 font-semibold">Like
+                    <div class="post">
+                        <div class="post__top">
+                            <img class="user__avatar post__avatar" src="../public/assets/img/pp.png" alt="" />
+                            <div class="post__topInfo">
+                                <h3 class="text-medium">User <a href="index.php?page=home"
+                                        class="text-blue-500">.Follow</a></h3>
+                                <p class="text-small text-gray-500">25 April at 20:30</p>
                             </div>
-                            <div
-                                class="w-1/3 hover:bg-gray-200 border-l-4 border-r- text-center text-xl text-gray-700 font-semibold">
-                                Share</div>
-                            <div
-                                class="w-1/3 hover:bg-gray-200 border-l-4 text-center text-xl text-gray-700 font-semibold">
-                                Comment
+                        </div>
+                        <div class="post__bottom">
+                            <p class="text-justify">
+
+                            </p>
+                        </div>
+                        <div class="post__image">
+                            <img src="../public/assets/img/post.png" alt="" />
+                        </div>
+                        <div class="post__options">
+                            <div class="post__option flex items-center">
+                                <span class="material-icons text-xl">thumb_up</span>
+                                <p class="text-medium">Like</p>
+                            </div>
+                            <div class="post__option flex items-center">
+                                <span class="material-icons text-xl">chat_bubble_outline</span>
+                                <p class="text-medium">Comment</p>
+                            </div>
+                            <div class="post__option flex items-center">
+                                <span class="material-icons text-xl">near_me</span>
+                                <p class="text-medium">Share</p>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
