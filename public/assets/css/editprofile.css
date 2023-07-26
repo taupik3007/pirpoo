@@ -1,0 +1,12 @@
+@media (min-width: 768px) {
+    .container {
+        width: 70%;
+    }
+}
+
+/* Konten full layar pada tablet dan mobile */
+@media (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+}
