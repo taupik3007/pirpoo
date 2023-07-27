@@ -42,6 +42,10 @@ if($chek_already > 0){
 
 
 $insert = mysqli_query($koneksi,"INSERT INTO `user`( `username`, `password`, `phone`, `usr_role_id`, `name`) VALUES ('$username','$password','$phone','3','$fullname')");
+$user_bio = mysqli_query($koneksi,"SELECT * FROM `user` where `username`= '$username'");
+$user_bio_id = mysqli_fetch_array($user_bio);
+$user_id = $user_bio_id['user_id'];
+$insert_bio = mysqli_query($koneksi,"INSERT INTO `biodata`( `user_id`) VALUES ('$user_id')");
 
 
 ?>

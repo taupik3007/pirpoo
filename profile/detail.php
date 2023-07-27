@@ -71,14 +71,15 @@
                         <p class="text-gray-600 text-lg text-center">Bio:</p>
                         <?php 
                             include '../koneksi.php';
-                            $data = mysqli_query($koneksi,"SELECT * FROM `biodata`");
-
+                            $user_id = $_SESSION['user_id'];
+                            $data = mysqli_query($koneksi,"SELECT * FROM `biodata` where `user_id` = '$user_id' ");
+                            $user = mysqli_fetch_array(mysqli_query($koneksi,"SELECT * FROM `user` where `user_id` = '$user_id'"));
                             foreach ($data as $data){
-                                echo  $data['username'] . "<br>";
+                                echo  $_SESSION['username'] . "<br>";
                                 echo  $data['bio_description'] . "<br>";
                                 echo "Hobby: " . $data['hoby'] . "<br>";
                                 echo "Email: " . $data['email'] . "<br>";
-                                echo "Phone: " . $data['phone'] . "<br>";
+                                echo "Phone: " . $user['phone'] . "<br>";
                                 // ... tambahkan informasi lain yang ingin ditampilkan
                                 echo "<br>";
                             }

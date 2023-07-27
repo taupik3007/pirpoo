@@ -1,3 +1,20 @@
+<?php
+       session_start();
+
+       if(!isset($_SESSION['user_id'])){
+           header("location: auth/login.php");
+       }
+       $user_id = $_SESSION['user_id'];
+
+       include '../koneksi.php';
+       $user = mysqli_query($koneksi,"SELECT * FROM `user` where `user_id` = '$user_id'");
+       $mydata=mysqli_fetch_array($user);
+       $bio = mysqli_query($koneksi,"SELECT * FROM `biodata` where `user_id` = '$user_id'");
+       $mybio = mysqli_fetch_array($bio);
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,36 +42,37 @@
                     Edit Profile
                 </h1>
                 <form class="space-y-6" action="proses-edit.php" method="POST">
+                    <input type="hidden" name= "user_id" value= "<?php echo $user_id;?>">
                     <div class="relative z-0 w-full mb-6 group">
-                        <input type="text" minlength="8" name="username" id="username"
+                        <input type="text" minlength="8" name="username" readonly="" id="username" value="<?php echo $mydata['username']; ?>"
                             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-3b11a4 dark:focus:border-3b11a4 focus:outline-none focus:ring-0 focus:border-3b11a4 peer"
                             placeholder=" " required />
                         <label for="username"
                             class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-3b11a4 peer-focus:dark:text-3b11a4 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Username</label>
                     </div>
                     <div class="relative z-0 w-full mb-6 group">
-                        <input type="text" name="bio" id="bio"
+                        <input type="text" name="bio" id="bio" value="<?php echo $mybio['bio_description'] ?>"
                             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-3b11a4 dark:focus:border-3b11a4 focus:outline-none focus:ring-0 focus:border-3b11a4 peer"
                             placeholder=" " required />
                         <label for="bio"
                             class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-3b11a4 peer-focus:dark:text-3b11a4 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Bio</label>
                     </div>
                     <div class="relative z-0 w-full mb-6 group">
-                        <input type="text" name="hobby" id="hobby"
+                        <input type="text" name="hobby" id="hobby" value="<?php echo $mybio['hoby'] ?>"
                             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-3b11a4 dark:focus:border-3b11a4 focus:outline-none focus:ring-0 focus:border-3b11a4 peer"
                             placeholder=" " required />
                         <label for="hobby"
                             class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-3b11a4 peer-focus:dark:text-3b11a4 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Hobby</label>
                     </div>
                     <div class="relative z-0 w-full mb-6 group">
-                        <input type="email" name="email" id="email"
+                        <input type="email" name="email" id="email" value="<?php echo $mybio['email'] ?>"
                             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-3b11a4 dark:focus:border-3b11a4 focus:outline-none focus:ring-0 focus:border-3b11a4 peer"
                             placeholder=" " required />
                         <label for="email"
                             class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-3b11a4 peer-focus:dark:text-3b11a4 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email</label>
                     </div>
                     <div class="relative z-0 w-full mb-6 group">
-                        <input type="tel" name="phone" id="phone"
+                        <input type="tel" name="phone" id="phone" value = "<?php echo $mydata['phone'] ?>"
                             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-3b11a4 dark:focus:border-3b11a4 focus:outline-none focus:ring-0 focus:border-3b11a4 peer"
                             placeholder=" " required pattern="[0-9]+" />
                         <label for="phone"
