@@ -1,3 +1,12 @@
+<?php
+    session_start();
+
+    if(!isset($_SESSION['user_id'])){
+        header("location: auth/login.php");
+    }
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -38,7 +47,7 @@
                             alt="Profile Picture">
                     </div>
                     <div class="pt-2 mt-4 w-full text-center text-xl text-black-600">
-                        Some Person
+                    <?php echo $_SESSION['nama']; ?>
                     </div>
                 </div>
                 <div class="w-full">
@@ -60,11 +69,21 @@
                 <div class="w-70 p-4 flex justify-center items-center mx-auto">
                     <div>
                         <p class="text-gray-600 text-lg text-center">Bio:</p>
-                        <p class="text-gray-600 text-sm pl-3 pr-2 text-justify">Ini adalah bio pengguna Some Person.
-                            Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. Sed sagittis condimentum mauris, eu iaculis quam feugiat et. Vestibulum
-                            ante ipsum primis
-                            in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+                        <?php 
+                            include '../koneksi.php';
+                            $data = mysqli_query($koneksi,"SELECT * FROM `biodata`");
+
+                            foreach ($data as $data){
+                                echo  $data['username'] . "<br>";
+                                echo  $data['bio_description'] . "<br>";
+                                echo "Hobby: " . $data['hoby'] . "<br>";
+                                echo "Email: " . $data['email'] . "<br>";
+                                echo "Phone: " . $data['phone'] . "<br>";
+                                // ... tambahkan informasi lain yang ingin ditampilkan
+                                echo "<br>";
+                            }
+                                
+                        ?>
                     </div>
                 </div>
 
