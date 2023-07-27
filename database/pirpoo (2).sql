@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 27, 2023 at 06:14 PM
+-- Generation Time: Jul 27, 2023 at 07:22 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -29,13 +29,11 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `biodata` (
   `bio_id` int(11) NOT NULL,
-  `gender` int(11) NOT NULL,
-  `username` varchar(50) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `email` varchar(255) DEFAULT NULL,
   `bio_description` longtext NOT NULL,
-  `hoby` varchar(255) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `phone` text NOT NULL,
-  `profile_image` varchar(255) NOT NULL,
+  `hoby` varchar(255) DEFAULT NULL,
+  `profile_image` varchar(255) DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -44,8 +42,8 @@ CREATE TABLE `biodata` (
 -- Dumping data for table `biodata`
 --
 
-INSERT INTO `biodata` (`bio_id`, `gender`, `username`, `bio_description`, `hoby`, `email`, `phone`, `profile_image`, `updated_at`, `created_at`) VALUES
-(1, 0, 'dellanoviasi', 'hai guys', 'main bola', 'geuis@gamail.com', '08989808809', '', NULL, NULL);
+INSERT INTO `biodata` (`bio_id`, `user_id`, `email`, `bio_description`, `hoby`, `profile_image`, `updated_at`, `created_at`) VALUES
+(4, 44, 'awikwok@gmail.com', 'hallo', 'fdsafsdaf', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -235,14 +233,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `username`, `password`, `phone`, `usr_role_id`, `name`, `warning_lavel`, `deleted_at`, `updated_at`, `created_at`) VALUES
-(34, 'budi__ryuzz', 'a8095d6f0640a7f578d4ebfdf0aaae35', '085870472353', 3, 'Budi Mulyadi', 0, NULL, NULL, NULL),
-(35, 'galihmana', 'ea7b11bd66208b00fbfc82e13eb3b68a', '087834567654', 3, 'yang', 0, NULL, NULL, NULL),
-(36, 'budi__ryuzz', 'a8095d6f0640a7f578d4ebfdf0aaae35', '085870472353', 3, 'Budi Mulyadi', 0, NULL, NULL, NULL),
-(37, 'mulyadi12345', '1c167f6c4b6a2bc3b8d4ad38c5b295a1', '09283405983', 3, 'aljsdfkajsdflkas', 0, NULL, NULL, NULL),
-(38, 'bd_mlydi', 'a8095d6f0640a7f578d4ebfdf0aaae35', '085870472353', 3, 'Budi Mulyadi', 0, NULL, NULL, NULL),
-(39, 'bd_mlydi', 'a8095d6f0640a7f578d4ebfdf0aaae35', '086734783464', 3, 'Budi Mulyadi', 0, NULL, NULL, NULL),
-(40, 'bd_mlydi', 'a8095d6f0640a7f578d4ebfdf0aaae35', '70219837028178', 3, 'Budi Mulyadi', 0, NULL, NULL, NULL),
-(41, 'budimulyadi1122', 'a8095d6f0640a7f578d4ebfdf0aaae35', '089786567654', 3, 'Budi Mulyadi', 0, NULL, NULL, NULL);
+(44, 'gararetek44', '29c3ef5f55a9b7f964d14f0b242c7b9b', '085864296239', 3, 'gararetek44', 0, NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -328,7 +319,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `biodata`
 --
 ALTER TABLE `biodata`
-  MODIFY `bio_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `bio_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `comment`
@@ -394,7 +385,7 @@ ALTER TABLE `trending`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
