@@ -10,3 +10,12 @@
         width: 100%;
     }
 }
+
+@font-face {
+    font-family: 'poppins';
+    src: url('../font/MontserratAlternates-Regular.ttf');
+}
+
+* {
+    font-family: 'poppins';
+}
