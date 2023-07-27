@@ -72,7 +72,7 @@
                 <!-- Navigation menu -->
                 <div class="w-full h-screen antialiased flex flex-col hover:cursor-pointer mt-8">
                     <a class="hover:bg-light-300 bg-light-200 p-2 w-full text-base text-left text-black-600 font-semibold"
-                        href="">
+                        href="editprofile.php">
                         <i class="bi bi-person-fill pl-3 pr-2 float-left"></i>
                         Edit Profile
                     </a>
