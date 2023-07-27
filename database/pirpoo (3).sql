@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 27, 2023 at 07:22 PM
+-- Generation Time: Jul 27, 2023 at 08:45 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -152,12 +152,21 @@ CREATE TABLE `post` (
   `post_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `post_value` longtext NOT NULL,
-  `post_image` varchar(225) NOT NULL,
-  `group_id` int(11) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
+  `post_image` varchar(225) DEFAULT NULL,
+  `group_id` int(11) DEFAULT NULL,
+  `created` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `updated_by` int(11) NOT NULL
+  `updated_by` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `post`
+--
+
+INSERT INTO `post` (`post_id`, `user_id`, `post_value`, `post_image`, `group_id`, `created`, `updated_at`, `updated_by`) VALUES
+(1, 44, 'fsdafdsafsdaf', NULL, NULL, '2023-07-27 13:02:13', '2023-07-27 13:02:13', 0),
+(2, 44, 'fdsafdsafsdafadsafsdaffdawkoewakof', NULL, NULL, '2023-07-27 13:18:37', '2023-07-27 13:18:37', 0),
+(3, 44, 'aku sakit hati sama dia', NULL, NULL, '2023-07-27 13:20:43', '2023-07-27 13:20:43', 0);
 
 -- --------------------------------------------------------
 
@@ -361,7 +370,7 @@ ALTER TABLE `otp`
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `role`

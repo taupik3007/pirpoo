@@ -4,9 +4,14 @@
     if(!isset($_SESSION['user_id'])){
         header("location: auth/login.php");
     }
+    include '../koneksi.php';
+$user_id = $_SESSION['user_id'];
+$username = $_SESSION['username'];
+
+    $show_post = mysqli_query($koneksi,"SELECT * FROM `post` INNER JOIN `user`  ON post.user_id = user.user_id where user.user_id ='$user_id' ORDER BY `post_id` DESC; ");
 
 
-
+    // echo mysqli_num_rows($show_post);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -86,14 +91,16 @@
       <!-- message sender starts -->
 
       <div class="messageSender">
+        
         <div class="messageSender__top">
           <img class="user__avatar" src="image/pp.png" alt="" />
-          <form>
-            <input class="messageSender__input" placeholder="apa yang anda pikirkan ?" type="text" />
-          </form>
+          <form method="POST" action="proses_post.php">
+            <input class="messageSender__input" name ="message" placeholder="apa yang anda pikirkan ?" type="text" />
+          <input type="hidden" name="user_id" value = "<?php echo $_SESSION['user_id']?>?">
           <div class="text-center-content">
-            <button type="submit" onclick="postMessage()" id="bedawarna">Post</button>
+            <button type="submit" style="margin-top 10px" onclick="postMessage()" id="bedawarna">Post</button>
           </div>
+          </form>
         </div>
         <div class="messageSender__bottom">
           <div class="messageSender__option">
@@ -112,29 +119,37 @@
       </div>
 
       <!-- message sender ends -->
-
-      <!-- post starts -->
-      <div class="post">
+    <?php
+      foreach($show_post as $post){
+        ?>
+          <div class="post">
         <div class="post__top">
           <img class="user__avatar post__avatar" src="image/pp.png" alt="" />
           <div class="post__topInfo">
-            <h3>User <a href="index.php?page=home">.Follow</a></h3>
-            <p>25 April at 20:30</p>
+            <h3><?php echo $post['name'] ?> <a href="index.php?page=home">.Follow</a></h3>
+            <p><?php echo $post['created_at']?></p>
           </div>
         </div>
 
         <div class="post__bottom">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <p><?php echo $post['post_value'] ?></p>
         </div>
+        <?php
+          if($post['post_image'] == null){
 
-        <div class="post__image">
+          }else{
+            ?>
+              <div class="post__image">
           <img src="image/post.png" alt="" />
         </div>
+            <?php
+          }
+        
+        
+        ?>
+
+        
+        
 
         <div class="post__options">
           <div class="post__option">
@@ -153,89 +168,21 @@
           </div>
         </div>
       </div>
+        <?php
+      }
+    
+    
+    ?>
+      <!-- post starts -->
+      
       <!-- post ends -->
 
       <!-- post starts -->
-      <div class="post">
-        <div class="post__top">
-          <img class="user__avatar post__avatar" src="image/pp.png" alt="" />
-          <div class="post__topInfo">
-            <h3>User <a href="index.php?page=home">.Follow</a></h3>
-            <p>25 April at 20:30</p>
-          </div>
-        </div>
-
-        <div class="post__bottom">
-          <p>Post Without Image</p>
-        </div>
-
-        <div class="post__options">
-          <div class="post__option">
-            <span class="material-icons"> thumb_up </span>
-            <p>Like</p>
-          </div>
-
-          <div class="post__option">
-            <span class="material-icons"> chat_bubble_outline </span>
-            <p>Comment</p>
-          </div>
-
-          <div class="post__option">
-            <span class="material-icons"> near_me </span>
-            <p>Share</p>
-          </div>
-        </div>
-      </div>
+      
       <!-- post ends -->
 
       <!-- post starts -->
-      <div class="post">
-        <div class="post__top">
-          <img class="user__avatar post__avatar" src="image/pp.png" alt="" />
-          <div class="post__topInfo">
-            <h3>User <a href="index.php?page=home">.Follow</a></h3>
-            <p>25 April at 20:30</p>
-          </div>
-        </div>
-
-        <div class="post__bottom">
-          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
-            Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-            Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-            Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable
-            source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes
-            of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular
-            during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
-            section 1.10.32.
-
-            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
-            1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact
-            original form, accompanied by English versions from the 1914 translation by H. Rackham.
-
-          </p>
-        </div>
-
-        <div class="post__image">
-          <img src="image/post.png" alt="" />
-        </div>
-
-        <div class="post__options">
-          <div class="post__option">
-            <span class="material-icons"> thumb_up </span>
-            <p>Like</p>
-          </div>
-
-          <div class="post__option">
-            <span class="material-icons"> chat_bubble_outline </span>
-            <p>Comment</p>
-          </div>
-
-          <div class="post__option">
-            <span class="material-icons"> near_me </span>
-            <p>Share</p>
-          </div>
-        </div>
-      </div>
+      
       <!-- post ends -->
     </div>
     <!-- feed ends -->

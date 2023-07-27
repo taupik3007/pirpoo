@@ -4,7 +4,14 @@
     if(!isset($_SESSION['user_id'])){
         header("location: auth/login.php");
     }
+    include '../koneksi.php';
+$user_id = $_SESSION['user_id'];
+$username = $_SESSION['username'];
 
+    $show_post = mysqli_query($koneksi,"SELECT * FROM `post` INNER JOIN `user`  ON post.user_id = user.user_id where user.user_id ='$user_id' ORDER BY `post_id` DESC; ");
+
+
+    // echo mysqli_num_rows($show_post);
 ?>
 
 <!doctype html>
@@ -133,31 +140,23 @@
                 <!-- Posts -->
                 <div class="mt-3 flex flex-col">
                     <!-- Post 1 -->
-                    <div class="post">
+
+                <?php
+                    foreach($show_post as $post){
+                        ?>
+                        <div class="post">
                         <div class="post__top">
                             <img class="user__avatar post__avatar" src="../public/assets/img/pp.png" alt="" />
                             <div class="post__topInfo">
-                                <h3 class="text-medium">User <a href="index.php?page=home"
+                                <h3 class="text-medium"><?php echo $post['name'] ?> <a href="index.php?page=home"
                                         class="text-blue-500">.Follow</a></h3>
-                                <p class="text-small text-gray-500">25 April at 20:30</p>
+                                <p class="text-small text-gray-500"><?php echo $post['created'] ?></p>
                             </div>
                         </div>
                         <div class="post__bottom">
-                            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry. Lorem Ipsum has been the
-                                industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                                galley of type and
-                                scrambled it to make a type specimen book. It has survived not only five centuries, but
-                                also the leap into
-                                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                                with the release of
-                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                                publishing software like
-                                Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <p class="text-justify"><?php echo $post['post_value'] ?></p>
                         </div>
-                        <div class="post__image">
-                            <img src="../public/assets/img/post.png" alt="" />
-                        </div>
+                        
                         <div class="post__options">
                             <div class="post__option flex items-center">
                                 <span class="material-icons text-xl">thumb_up</span>
@@ -173,74 +172,21 @@
                             </div>
                         </div>
                     </div>
+                    <?php
+                    }
+                
+                
+                ?>
+
+
+
+                    
 
                     <!-- Post 2 -->
-                    <div class="post">
-                        <div class="post__top">
-                            <img class="user__avatar post__avatar" src="../public/assets/img/pp.png" alt="" />
-                            <div class="post__topInfo">
-                                <h3 class="text-medium">User <a href="index.php?page=home"
-                                        class="text-blue-500">.Follow</a></h3>
-                                <p class="text-small text-gray-500">25 April at 20:30</p>
-                            </div>
-                        </div>
-                        <div class="post__bottom">
-                            <p class="text-justify">
-                                Post Without Image
-                            </p>
-                        </div>
-                        <div class="post__image">
-                            <img src="" alt="" />
-                        </div>
-                        <div class="post__options">
-                            <div class="post__option flex items-center">
-                                <span class="material-icons text-xl">thumb_up</span>
-                                <p class="text-medium">Like</p>
-                            </div>
-                            <div class="post__option flex items-center">
-                                <span class="material-icons text-xl">chat_bubble_outline</span>
-                                <p class="text-medium">Comment</p>
-                            </div>
-                            <div class="post__option flex items-center">
-                                <span class="material-icons text-xl">near_me</span>
-                                <p class="text-medium">Share</p>
-                            </div>
-                        </div>
-                    </div>
+                    
 
                     <!-- Post 3 -->
-                    <div class="post">
-                        <div class="post__top">
-                            <img class="user__avatar post__avatar" src="../public/assets/img/pp.png" alt="" />
-                            <div class="post__topInfo">
-                                <h3 class="text-medium">User <a href="index.php?page=home"
-                                        class="text-blue-500">.Follow</a></h3>
-                                <p class="text-small text-gray-500">25 April at 20:30</p>
-                            </div>
-                        </div>
-                        <div class="post__bottom">
-                            <p class="text-justify">
-
-                            </p>
-                        </div>
-                        <div class="post__image">
-                            <img src="../public/assets/img/post.png" alt="" />
-                        </div>
-                        <div class="post__options">
-                            <div class="post__option flex items-center">
-                                <span class="material-icons text-xl">thumb_up</span>
-                                <p class="text-medium">Like</p>
-                            </div>
-                            <div class="post__option flex items-center">
-                                <span class="material-icons text-xl">chat_bubble_outline</span>
-                                <p class="text-medium">Comment</p>
-                            </div>
-                            <div class="post__option flex items-center">
-                                <span class="material-icons text-xl">near_me</span>
-                                <p class="text-medium">Share</p>
-                            </div>
-                        </div>
-                    </div>
+                   
 
                 </div>
             </div>
