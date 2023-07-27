@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 10, 2023 at 07:28 PM
+-- Generation Time: Jul 27, 2023 at 06:14 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -30,11 +30,22 @@ SET time_zone = "+00:00";
 CREATE TABLE `biodata` (
   `bio_id` int(11) NOT NULL,
   `gender` int(11) NOT NULL,
+  `username` varchar(50) NOT NULL,
   `bio_description` longtext NOT NULL,
+  `hoby` varchar(255) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `phone` text NOT NULL,
   `profile_image` varchar(255) NOT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `biodata`
+--
+
+INSERT INTO `biodata` (`bio_id`, `gender`, `username`, `bio_description`, `hoby`, `email`, `phone`, `profile_image`, `updated_at`, `created_at`) VALUES
+(1, 0, 'dellanoviasi', 'hai guys', 'main bola', 'geuis@gamail.com', '08989808809', '', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -129,8 +140,9 @@ CREATE TABLE `otp` (
 --
 
 INSERT INTO `otp` (`otp_id`, `otp`, `user_id`) VALUES
-(18, 8857, 30),
-(20, 6729, 29);
+(20, 6729, 29),
+(28, 5980, 30),
+(38, 8707, 34);
 
 -- --------------------------------------------------------
 
@@ -223,35 +235,14 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `username`, `password`, `phone`, `usr_role_id`, `name`, `warning_lavel`, `deleted_at`, `updated_at`, `created_at`) VALUES
-(1, 'awikwok', '9504c244d1909fe23961ac46ce61d0bb', '324234', 3, 'awikwok', 0, NULL, NULL, NULL),
-(2, 'eqweewr', '80355073480594a99470dcacccd8cf2c', '12321', 3, 'fsdaf', 0, NULL, NULL, NULL),
-(4, 'awikwok', '808cf84a706edcf0fb7f66f67ef3b067', '34234', 3, 'fsakg', 0, NULL, NULL, NULL),
-(5, 'suga', '29c3ef5f55a9b7f964d14f0b242c7b9b', '432854845', 3, 'fsakdkfgkg', 0, NULL, NULL, NULL),
-(6, 'awikwok', '5ca1d2f76aed859f2f4d7a50829003d7', '4324', 3, 'dasd', 0, NULL, NULL, NULL),
-(7, 'awikwok', '7ce659013692824a922e0f101e7fb136', '342', 3, 'fhksda', 0, NULL, NULL, NULL),
-(8, 'Awikwoko', 'fc2baa1a20b4d5190b122b383d7449fd', '342', 3, 'fsdafas', 0, NULL, NULL, NULL),
-(9, 'awikwok', '0544ed93c22d5e1c869010c4515a7401', '4324', 3, 'fdsaf', 0, NULL, NULL, NULL),
-(10, 'haii', '5c3568022286e4bab5b287942686b368', '63268', 3, 'fsdf', 0, NULL, NULL, NULL),
-(11, 'haii', 'ee01dc93df62b72610b28cb7fab9df0c', '68969', 3, 'fdsaf', 0, NULL, NULL, NULL),
-(12, 'awikwok', '0f4768a736e56a8ff3b6067caeeb85c7', '34296', 3, 'sff', 0, NULL, NULL, NULL),
-(13, 'Hii', 'd2e463c7964fdc3523b0d9bb6b937c48', '424', 3, 'fdsaf', 0, NULL, NULL, NULL),
-(14, 'Hii', '0911d1f883d425428fcfd5628ee3d68e', '234', 3, 'fdsaf', 0, NULL, NULL, NULL),
-(15, 'hii', '0911d1f883d425428fcfd5628ee3d68e', '3213', 3, 'fhsdkafh', 0, NULL, NULL, NULL),
-(16, 'hii', '9c599487aa9145bbc1031481dc0d60da', '342', 3, 'fsadf', 0, NULL, NULL, NULL),
-(17, 'awikwok', '2f9618df0f4519e0c1fa4d7e8c974fab', '3432', 3, 'fsadf', 0, NULL, NULL, NULL),
-(18, 'hii', '13d56fc97e3c6feb6dfb20d84f3c64cd', '3424', 3, 'fsdaf', 0, NULL, NULL, NULL),
-(19, 'haii', '80355073480594a99470dcacccd8cf2c', '3123', 3, 'fdsfa', 0, NULL, NULL, NULL),
-(20, 'budi', '627eb5eda2f4daffc5c5e8150f664b4b', '3213', 3, 'fsdf', 0, NULL, NULL, NULL),
-(21, 'budi', '35a322a37e6fb34b2aaea6f4ed30aa7f', '23432', 3, 'fdsaf', 0, NULL, NULL, NULL),
-(22, 'rewr', '4ec503be252d765ea37621a629afdaa6', '23432', 3, 'fsdaf', 0, NULL, NULL, NULL),
-(23, 'gaw', '03a1a0d3ddad32e6c5d57dee72a9a833', '324', 3, 'fashld', 0, NULL, NULL, NULL),
-(24, 'gaw', '038e807e75bb90bf7c8f2cc3ee754a7b', '32496', 3, 'fsdaf', 0, NULL, NULL, NULL),
-(25, 'haii', '02ad6265462429afec966a5a1bdcdc19', '324', 3, 'fdsaf', 0, NULL, NULL, NULL),
-(26, 'atun12312311', 'dd1a7af7000df7f16a03bfd510929054', '123213123', 3, 'awikwok', 0, NULL, NULL, NULL),
-(27, 'gararetek44', '29c3ef5f55a9b7f964d14f0b242c7b9b', '3213123123', 3, 'taupik', 0, NULL, NULL, NULL),
-(28, 'fsadffdsaf', 'c1daabad4e5850c37911a3c7fa548a64', '23432432', 3, 'fdsaf', 0, NULL, NULL, NULL),
-(29, 'awikwok111111', '29c3ef5f55a9b7f964d14f0b242c7b9b', '085864296239', 3, 'awikwok', 0, NULL, NULL, NULL),
-(30, 'mangbud123', '29c3ef5f55a9b7f964d14f0b242c7b9b', '085870472353', 3, 'mangbud', 0, NULL, NULL, NULL);
+(34, 'budi__ryuzz', 'a8095d6f0640a7f578d4ebfdf0aaae35', '085870472353', 3, 'Budi Mulyadi', 0, NULL, NULL, NULL),
+(35, 'galihmana', 'ea7b11bd66208b00fbfc82e13eb3b68a', '087834567654', 3, 'yang', 0, NULL, NULL, NULL),
+(36, 'budi__ryuzz', 'a8095d6f0640a7f578d4ebfdf0aaae35', '085870472353', 3, 'Budi Mulyadi', 0, NULL, NULL, NULL),
+(37, 'mulyadi12345', '1c167f6c4b6a2bc3b8d4ad38c5b295a1', '09283405983', 3, 'aljsdfkajsdflkas', 0, NULL, NULL, NULL),
+(38, 'bd_mlydi', 'a8095d6f0640a7f578d4ebfdf0aaae35', '085870472353', 3, 'Budi Mulyadi', 0, NULL, NULL, NULL),
+(39, 'bd_mlydi', 'a8095d6f0640a7f578d4ebfdf0aaae35', '086734783464', 3, 'Budi Mulyadi', 0, NULL, NULL, NULL),
+(40, 'bd_mlydi', 'a8095d6f0640a7f578d4ebfdf0aaae35', '70219837028178', 3, 'Budi Mulyadi', 0, NULL, NULL, NULL),
+(41, 'budimulyadi1122', 'a8095d6f0640a7f578d4ebfdf0aaae35', '089786567654', 3, 'Budi Mulyadi', 0, NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -337,7 +328,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `biodata`
 --
 ALTER TABLE `biodata`
-  MODIFY `bio_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `bio_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `comment`
@@ -373,7 +364,7 @@ ALTER TABLE `likes`
 -- AUTO_INCREMENT for table `otp`
 --
 ALTER TABLE `otp`
-  MODIFY `otp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `otp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `post`
@@ -403,7 +394,7 @@ ALTER TABLE `trending`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
