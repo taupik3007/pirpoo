@@ -1,3 +1,13 @@
+<?php
+    session_start();
+
+    if(!isset($_SESSION['user_id'])){
+        header("location: auth/login.php");
+    }
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,8 +35,10 @@
     <div class="header__right">
       <div class="header__info">
         <span class="material-icons"> notifications_active </span>
-        <img class="user__avatar" href="../profile/detail.php" src="image/pp.png" alt="" />
-        <h4>Park Jimin</h4>
+        <a href="../profile/detail.php">
+                    <img class="user__avatar" src="image/pp.png" alt="" />
+                </a>
+        <h4><?php echo $_SESSION['nama']; ?></h4>
       </div>
     </div>
   </div>

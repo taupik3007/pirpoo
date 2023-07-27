@@ -28,7 +28,7 @@
 			$_SESSION['nama'] = $data['name'];
 	 		// $_SESSION['username'] = $username;
 	 		// $_SESSION['nama'] = $data['nama'];
-	 		header("location:../Homepage.php");
+	 		header("location:../Homepage/Homepage.php");
 
 	 	}else{
 
