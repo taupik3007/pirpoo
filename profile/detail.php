@@ -11,7 +11,7 @@ $username = $_SESSION['username'];
     $show_post = mysqli_query($koneksi,"SELECT * FROM `post` INNER JOIN `user`  ON post.user_id = user.user_id where user.user_id ='$user_id' ORDER BY `post_id` DESC; ");
 
 
-    // echo mysqli_num_rows($show_post);
+    $jml_postingan= mysqli_num_rows($show_post);
 ?>
 
 <!doctype html>
@@ -60,15 +60,15 @@ $username = $_SESSION['username'];
                 <div class="w-full">
                     <div class="flex justify-between items-center py-3 px-6">
                         <div class="text-black-600">
-                            <span class="font-bold">123</span>
+                            <span class="font-bold"><?php echo $jml_postingan; ?></span>
                             <h6 class="text-sm">Postingan</h6>
                         </div>
                         <div class="text-black-600">
-                            <span class="font-bold">456</span>
+                            <span class="font-bold">0</span>
                             <h6 class="text-sm">Pengikut</h6>
                         </div>
                         <div class="text-black-600">
-                            <span class="font-bold">789</span>
+                            <span class="font-bold">0</span>
                             <h6 class="text-sm">Mengikuti</h6>
                         </div>
                     </div>
