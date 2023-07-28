@@ -77,7 +77,8 @@ $username = $_SESSION['username'];
 
       <div class="sidebarRow">
         <!--ini mah yang di samping-->
-        <button type="submit" onclick="myFunction()">POST</button>
+        <a class="big-btn" href="../logout.php" ><button type="submit" onclick="myFunction()">Log Out</button></a>
+        
       </div>
 
 
@@ -91,7 +92,6 @@ $username = $_SESSION['username'];
       <!-- message sender starts -->
 
       <div class="messageSender">
-        
         <div class="messageSender__top">
           <img class="user__avatar" src="image/pp.png" alt="" />
           <form method="POST" action="proses_post.php">
