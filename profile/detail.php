@@ -2,7 +2,7 @@
     session_start();
 
     if(!isset($_SESSION['user_id'])){
-        header("location: auth/login.php");
+        header("location: ../auth/login.php");
     }
     include '../koneksi.php';
 $user_id = $_SESSION['user_id'];

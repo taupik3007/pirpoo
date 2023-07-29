@@ -70,7 +70,7 @@
         var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
         if (username === "" || password === "") {
-            showNotification("Maneh teu acan ngisi form.", "error");
+            showNotification("Punten aa/teteh form na teu acan dilebetan:)", "error");
         }
     }
 
