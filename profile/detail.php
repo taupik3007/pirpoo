@@ -44,9 +44,12 @@ $username = $_SESSION['username'];
                     <button class="p-2 fa fa-bars text-4xl text-gray-600"></button>
                 </div>
             </div>
-
             <!-- Sidebar -->
             <div class="w-0 md:w-1/4 lg:w-1/5 h-0 md:h-screen overflow-y-hidden bg-white border-2">
+            <div class="flex items-center justify-between">
+                        <a href="../Homepage/Homepage.php">
+                            <img src="../public/assets/img/chevron-left.svg" alt="" class="w-8 h-auto">
+                    </div>
                 <!-- Profile picture and name -->
                 <div class="p-5 bg-white sticky top-0">
                     <div class="flex justify-center items-center">
@@ -95,13 +98,18 @@ $username = $_SESSION['username'];
                     </div>
                 </div>
 
-
+               
                 <!-- Navigation menu -->
                 <div class="w-full h-screen antialiased flex flex-col hover:cursor-pointer mt-8">
                     <a class="hover:bg-light-300 bg-light-200 p-2 w-full text-base text-left text-black-600 font-semibold"
                         href="editprofile.php">
                         <i class="bi bi-person-fill pl-3 pr-2 float-left"></i>
                         Edit Profile
+                    </a>
+                    <a class="hover:bg-light-300 bg-light-200 p-2 w-full text-base text-left text-black-600 font-semibold"
+                        href="../auth/forgot-pw.php">
+                        <i class="bi bi-person-fill pl-3 pr-2 float-left"></i>
+                        Edit Password
                     </a>
                     <a class="hover:bg-light-300 bg-light-200 p-2 w-full text-base text-left text-black-600 font-semibold"
                         href="">
@@ -150,7 +158,7 @@ $username = $_SESSION['username'];
                             <div class="post__topInfo">
                                 <h3 class="text-medium"><?php echo $post['name'] ?> <a href="index.php?page=home"
                                         class="text-blue-500">.Follow</a></h3>
-                                <p class="text-small text-gray-500"><?php echo $post['created'] ?></p>
+                                <p class="text-small text-gray-500"><?php echo $post['created_at'] ?></p>
                             </div>
                         </div>
                         <div class="post__bottom">

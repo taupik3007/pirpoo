@@ -75,11 +75,11 @@ $username = $_SESSION['username'];
         <h4>Grup</h4>
       </div>
 
-      <div class="sidebarRow">
+      
         <!--ini mah yang di samping-->
+        
         <a class="big-btn" href="../logout.php" ><button type="submit" onclick="myFunction()">Log Out</button></a>
         
-      </div>
 
 
     </div>
@@ -128,6 +128,7 @@ $username = $_SESSION['username'];
           <div class="post__topInfo">
             <h3><?php echo $post['name'] ?> <a href="index.php?page=home">.Follow</a></h3>
             <p><?php echo $post['created_at']?></p>
+          <img class="user__avatar post__avatar" src="image/icon 3.jpg" alt="" />
           </div>
         </div>
 
