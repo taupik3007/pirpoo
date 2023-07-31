@@ -57,7 +57,7 @@ $username = $_SESSION['username'];
                             alt="Profile Picture">
                     </div>
                     <div class="pt-2 mt-4 w-full text-center text-xl text-black-600">
-                    <?php echo $_SESSION['nama']; ?>
+                    <?php echo $_SESSION['username']; ?>
                     </div>
                 </div>
                 <div class="w-full">
@@ -85,7 +85,7 @@ $username = $_SESSION['username'];
                             $data = mysqli_query($koneksi,"SELECT * FROM `biodata` where `user_id` = '$user_id' ");
                             $user = mysqli_fetch_array(mysqli_query($koneksi,"SELECT * FROM `user` where `user_id` = '$user_id'"));
                             foreach ($data as $data){
-                                echo  $_SESSION['username'] . "<br>";
+                                echo  $_SESSION['nama'] . "<br>";
                                 echo  $data['bio_description'] . "<br>";
                                 echo "Hobby: " . $data['hoby'] . "<br>";
                                 echo "Email: " . $data['email'] . "<br>";
@@ -156,7 +156,7 @@ $username = $_SESSION['username'];
                         <div class="post__top">
                             <img class="user__avatar post__avatar" src="../public/assets/img/pp.png" alt="" />
                             <div class="post__topInfo">
-                                <h3 class="text-medium"><?php echo $post['name'] ?> <a href="index.php?page=home"
+                                <h3 class="text-medium"><?php echo $post['username'] ?> <a href="index.php?page=home"
                                         class="text-blue-500">.Follow</a></h3>
                                 <p class="text-small text-gray-500"><?php echo $post['created_at'] ?></p>
                             </div>
