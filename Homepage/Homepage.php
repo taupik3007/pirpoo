@@ -125,7 +125,7 @@ $username = $_SESSION['username'];
         <div class="post__top">
           <img class="user__avatar post__avatar" src="image/pp.png" alt="" />
           <div class="post__topInfo">
-            <h3><?php echo $post['name'] ?> <a href="index.php?page=home">.Follow</a></h3>
+            <h3><?php echo $post['name'] ?> <a href="index.php?page=home">.Ikuti</a></h3>
             <p><?php echo $post['created_at']?></p>
           </div>
           

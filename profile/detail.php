@@ -107,7 +107,7 @@ $username = $_SESSION['username'];
                         Edit Profile
                     </a>
                     <a class="hover:bg-light-300 bg-light-200 p-2 w-full text-base text-left text-black-600 font-semibold"
-                        href="../auth/forgot-pw.php">
+                        href="../auth/proses-change-pw.php">
                         <i class="bi bi-person-fill pl-3 pr-2 float-left"></i>
                         Edit Password
                     </a>
