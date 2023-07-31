@@ -160,6 +160,7 @@ $username = $_SESSION['username'];
                                         class="text-blue-500">.Follow</a></h3>
                                 <p class="text-small text-gray-500"><?php echo $post['created_at'] ?></p>
                             </div>
+                            <img class="user__avatar post_avatar" src="icon 3.jpg" alt="" />
                         </div>
                         <div class="post__bottom">
                             <p class="text-justify"><?php echo $post['post_value'] ?></p>
