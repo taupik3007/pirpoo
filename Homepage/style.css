@@ -262,7 +262,7 @@ body {
 
 .messageSender {
   display: flex;
-  margin-top: 30px;
+  margin-top: 306px;
   flex-direction: column;
   background-color: white;
   border-radius: 15px;
@@ -859,6 +859,7 @@ body {
 .post__avatar {
   margin-right: 10px;
 }
+
 
 .post__topInfo h3 {
   font-size: medium;

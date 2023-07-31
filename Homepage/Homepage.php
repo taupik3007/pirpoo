@@ -90,15 +90,14 @@ $username = $_SESSION['username'];
 
 
       <!-- message sender starts -->
-
       <div class="messageSender">
         <div class="messageSender__top">
           <img class="user__avatar" src="image/pp.png" alt="" />
-          <form method="POST" action="proses_post.php">
-            <input class="messageSender__input" name ="message" placeholder="apa yang anda pikirkan ?" type="text" />
-          <input type="hidden" name="user_id" value = "<?php echo $_SESSION['user_id']?>?">
-          <div class="text-center-content">
-            <button type="submit" style="margin-top 10px" onclick="postMessage()" id="bedawarna">Post</button>
+          <form class="messageSender__top" method="POST" action="proses_post.php">
+          <input class="messageSender__input" name ="message" placeholder="apa yang anda pikirkan ?" type="text" />
+          <input type="hidden" name="user_id" value = "<?php echo $_SESSION['user_id']?>?"> 
+          <div>
+          <button class="text-center-content" type="submit"  onclick="postMessage()" id="bedawarna">Post</button>
           </div>
           </form>
         </div>
@@ -128,8 +127,11 @@ $username = $_SESSION['username'];
           <div class="post__topInfo">
             <h3><?php echo $post['name'] ?> <a href="index.php?page=home">.Follow</a></h3>
             <p><?php echo $post['created_at']?></p>
-          <img class="user__avatar post__avatar" src="image/icon 3.jpg" alt="" />
           </div>
+          
+          <img class="user__avatar post_avatar" src="image/icon 3.jpg" alt="" />
+          
+          
         </div>
 
         <div class="post__bottom">
