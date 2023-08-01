@@ -17,6 +17,7 @@ $username = $_SESSION['username'];
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,6 +25,7 @@ $username = $_SESSION['username'];
   <link rel="icon" href="image/Logo pirpo.PNG" type="image">
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -128,11 +130,8 @@ $username = $_SESSION['username'];
             <h3><?php echo $post['username'] ?> <a href="index.php?page=home">.Ikuti</a></h3>
             <p><?php echo $post['created_at']?></p>
           </div>
-          
-          <img class="user__avatar post_avatar" src="image/icon 3.jpg" alt="" />
-          
-          
-        </div>
+          <img class="user__avatar post__avatar" src="image/icon 3.jpg" alt="" />
+          </div>
 
         <div class="post__bottom">
           <p><?php echo $post['post_value'] ?></p>

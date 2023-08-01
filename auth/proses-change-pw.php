@@ -54,8 +54,8 @@
                         </a>
                         <button type="OKE"
                             class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm py-2.5 px-4 text-center dark:bg-3b11a4 dark:hover:bg-blue-700 dark:focus:ring-blue-800">OKE</button>
-                        
                         <img src="../public/assets/img/PIRPOO.png" alt="" class="w-1/5 h-auto">
+
                          </div>
                 </form>
             </div>

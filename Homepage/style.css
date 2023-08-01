@@ -15,7 +15,6 @@
   width: 25px;
 }
 
-
 .avatar__{
   max-width: 40%;
   height: auto;
@@ -530,6 +529,7 @@ background: #ff0000;
 .user__avatar {
   border-radius: 30%;
   width: 25px;
+
 }
 
 
@@ -857,7 +857,7 @@ body {
 }
 
 .post__avatar {
-  margin-right: 10px;
+  margin-right: 100px;
 }
 
 
